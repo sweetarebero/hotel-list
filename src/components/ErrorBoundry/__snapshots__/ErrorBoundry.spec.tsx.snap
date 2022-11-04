@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Boundary render renders correctlty 1`] = `
+<div>
+  <div>
+    children
+  </div>
+</div>
+`;

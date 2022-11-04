@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render renders correctly 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="Layout"
+    >
+      <div
+        class="container"
+      >
+        <header
+          class="Header"
+        >
+          <nav
+            class="navbar"
+          >
+            <div
+              class="container-fluid"
+            >
+              <a
+                class="navbar-brand"
+                href="/"
+              >
+                <img
+                  alt="Qantas logo"
+                  src="qantas-logo.png"
+                  title="go to home page"
+                />
+              </a>
+            </div>
+          </nav>
+        </header>
+        <p>
+          Loading...
+        </p>
+      </div>
+    </div>
+    ;
+  </div>
+</div>
+`;

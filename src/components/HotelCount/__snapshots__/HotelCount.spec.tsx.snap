@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelCount renders correctly 1`] = `
+<div>
+  <p>
+    <b>
+      5
+    </b>
+     
+    <i>
+       hotels in
+    </i>
+     
+    <b>
+      Sydney
+    </b>
+  </p>
+</div>
+`;

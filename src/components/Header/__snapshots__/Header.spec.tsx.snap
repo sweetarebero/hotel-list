@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div>
+  <header
+    class="Header"
+  >
+    <nav
+      class="navbar"
+    >
+      <div
+        class="container-fluid"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          <img
+            alt="Qantas logo"
+            src="qantas-logo.png"
+            title="go to home page"
+          />
+        </a>
+      </div>
+    </nav>
+  </header>
+</div>
+`;
