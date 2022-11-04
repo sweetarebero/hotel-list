@@ -1,0 +1,11 @@
+.Hotels {
+  .row {
+    width: 100%;
+  }
+  .col {
+    padding: 0;
+  }
+  .col:last-of-type > * {
+    margin-left: auto;
+  }
+}

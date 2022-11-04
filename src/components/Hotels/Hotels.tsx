@@ -5,6 +5,9 @@ import HotelCount from "../HotelCount/HotelCount";
 import HotelList from "../HotelList/HotelList";
 import SortHotel from "../SortHotels/SortHotel";
 import SortProvider from "../SortProvider/SortProvider";
+import { city } from "../../models/global";
+
+import "./Hotels.scss";
 
 interface Props {}
 
@@ -16,10 +19,10 @@ const Hotels = (props: Props) => {
 
   return (
     <SortProvider>
-      <div className="sort-section">
-        <Row>
+      <div className="Hotels">
+        <Row className="sort-section">
           <Col>
-            <HotelCount count={data.length} city="Sydney" />
+            <HotelCount count={data.length} city={city} />
           </Col>
           <Col>
             <SortHotel />

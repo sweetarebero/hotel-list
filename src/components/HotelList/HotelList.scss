@@ -28,6 +28,10 @@
   .hotel-details {
     padding-left: 0;
     margin-left: 20px;
+
+    @media (max-width: 767.98px) {
+      border: 0;
+    }
     .hotel-details-title {
       margin-bottom: 0;
     }
@@ -48,6 +52,12 @@
   .price-details {
     border-top: 1px solid #ccc;
     text-align: right;
+
+    @media (max-width: 767.98px) {
+      border-top: 0;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
 
     .price-details-currency {
       color: gray;

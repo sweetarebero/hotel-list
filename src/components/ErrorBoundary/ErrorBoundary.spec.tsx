@@ -1,9 +1,9 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import ErrorBoundary from "./ErrorBoundry";
+import ErrorBoundary from "./ErrorBoundary";
 
-describe("Error Boundary render", () => {
+describe("Error Boundary", () => {
   it("renders correctlty", () => {
     const { container } = render(
       <ErrorBoundary>

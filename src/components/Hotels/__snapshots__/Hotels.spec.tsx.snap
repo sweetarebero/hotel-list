@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hotels render renders correctly 1`] = `
+exports[`Hotels renders correctly 1`] = `
 <div>
   <p>
     Loading...

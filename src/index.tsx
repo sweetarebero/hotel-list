@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./custom.scss";
-import ErrorBoundary from "./components/ErrorBoundry/ErrorBoundry";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

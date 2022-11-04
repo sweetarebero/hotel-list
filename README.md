@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Hotel List App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![](http://g.recordit.co/KkmUcDbenl.gif)
 
 ## Available Scripts
 
@@ -18,6 +20,10 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run serve`
+
+Launches mock server on port 4000 (http://localhost:3000) uses json server
 
 ### `npm run build`
 
@@ -39,8 +45,72 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Steps to follow to run this app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+run following commands:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm run server (start mock server)
+npm start (start hotel-list app)
+npm run test (test cases)
+```
+
+## Task details and assumption
+
+As a user of Qantas Hotels I would like to see a list of hotels that can be sorted by price.
+
+**Sorting options implemented:**
+
+- Price (high-low)
+- Price (low-high)
+
+**Assumptions and Tradeoffs:**
+
+- City assumed as constant to be "Sydney"
+- Styling is not pixel-perfect (as mentioned in task instructions)
+- Have done minimal responsive design (mobile design was not provided)
+- Rating (starts or circles) work only on latest browsers that support css variables
+  Leveraging on this instruction "You can assume this app to only be run in modern browsers (Chrome, Safari, Firefox) supporting recent features"
+- Minimal test cases written (Jest mock for UseAxios hook isn't working), can be found in each component folder
+- For sorting I have used `lodash`, it could also be written in a manual function like below, but I would rather not reinventing the Wheel.
+  ```
+  objs.sort((a,b) => a.objProperty - b.objProperty);
+  ```
+- I have not used any currency converter, wasn't sure if that was required.
+- Error Boundary has been written to catch any JS errors
+- When running test case ignore the warning of ErrorBoundary test, its due to throw Error ( couldn't fix in time)
+
+## Project structure
+
+**(highlighting important project files)**
+
+```
+src
+│   README.md
+│   App.tsx  (basic layout)
+│
+└───components
+│   │   ErrorBoundary
+│   │   Header (generic header with logo)
+|   |   HotelCount (hotel list size with city)
+|   |   HotelList (hotel list)
+|   |   Hotels (wrapper with SortProvider)
+|   |   Layout (generic app layout)
+|   |   Rating (Star or Circular rating)
+|   |   SortHotels (sorting dropdown)
+|   |   SortProvider (context to share selected sort option)
+│   │
+│   └───data
+│   |   │   data.json
+│   |
+|   └───images
+|   |   |   qantas-logo.png
+|   |
+│   └───models
+│   |   |   global.ts (global types/constants)
+|   |   |   hotel.ts (data response types)
+│   |
+|   └───utils
+|       |   sentenceCase.ts (string formatter)
+|       |   sortHotelByPrice.ts (price sorting function)
+```

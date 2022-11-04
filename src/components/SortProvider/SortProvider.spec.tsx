@@ -7,17 +7,17 @@ import HotelList from "../HotelList/HotelList";
 import { Col, Row } from "reactstrap";
 import HotelCount from "../HotelCount/HotelCount";
 import SortHotel from "../SortHotels/SortHotel";
-import { SortType } from "../../models/global";
+import { city, SortType } from "../../models/global";
 
 it("should log a user in", () => {
   const updateSortType = jest.fn();
   const sortType = SortType.PRICE_HIGH_LOW;
-  const { getByText } = render(
+  render(
     <SortContext.Provider value={{ sortType, updateSortType }}>
       <div className="sort-section">
         <Row>
           <Col>
-            <HotelCount count={mockData.length} city="Sydney" />
+            <HotelCount count={mockData.length} city={city} />
           </Col>
           <Col>
             <SortHotel />
